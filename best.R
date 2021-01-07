@@ -23,6 +23,7 @@ best <- function(state, outcome) {
         ordered_df <- {
                 outcome_df %>% 
                             filter(State == state) %>%
+                            arrange(Hospital.Name) %>%
                             arrange(!!sym(list_causes[[outcome]]))
         }
       
