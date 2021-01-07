@@ -8,7 +8,7 @@ best <- function(state, outcome) {
                             "pneumonia" = names(outcome_df[23])
                             )
         
-        ## Coerced to numeric since read as character
+        ## Coerce to numeric since read as character
         for (i in list_causes) {
                 outcome_df[, i] <- as.numeric(outcome_df[, i])
         }
