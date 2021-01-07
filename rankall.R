@@ -8,7 +8,7 @@ rankall <- function(outcome, num = "best") {
                       "pneumonia" = names(outcome_df[23])
   )
   list_state <- sort(unique(outcome_df$State))
-  return_df <- data.frame(hospital = 1:54, state = list_state, row.names = list_state)
+  return_df <- data.frame(hospital = 1:length(list_state), state = list_state, row.names = list_state)
   
   ## Coerce to numeric since read as character
   for (i in list_causes) {
